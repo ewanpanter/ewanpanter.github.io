@@ -1,0 +1,10 @@
+---
+---
+
+@import "tale";
+
+/* Make post titles less massive */
+.post-title {
+  font-size: 2.5rem !important;  /* Default is 4rem - adjust to taste */
+  line-height: 1.2;
+}
