@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% seo %}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Alternate -->
+  <link type="application/atom+xml" rel="alternate" href="{{ site.baseurl }}/feed.xml" title="{{ site.title }}" />
+
+  <!-- Analytics -->
+  <script>
+    (function(){
+      var fullres = document.createElement('script');
+      fullres.async = true;
+      fullres.src = 'https://t.fullres.net/ewanpantergithub.js?'+(new Date()-new Date()%43200000);
+      document.head.appendChild(fullres);
+    })();
+  </script>
+</head>
