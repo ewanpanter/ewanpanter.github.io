@@ -6,7 +6,7 @@ title: "Working Notes - 20/11/25"
 Well one of those weeks where too much has happened to properly keep up with it all! Lots of interesting stuff - the new releases will keep me busy for a while!
 
 ## It's 0.1 louder
-OpenAI have launched [GPT5.1](https://cdn.openai.com/pdf/4173ec8d-1229-47db-96de-06d87147e07e/5_1_system_card.pdf) - this is an incremental release and a relatively small improvement on GPT5 (which was already great). It lets you change the 'style' of the response (e.g. professional vs quirky) in the app, which sounds, and is, awful. They have also worked on ensuring the model spends the correct amount of tokens on thinking for more complex questions - which will obviously help reduce their inference costs! They've also (finally) made it not to use em dashes if you ask it not to - in some ways great, in many more ways aghhhhh as it'll now be harder to tell at a glance whether something was AI generated. I've used it a fair bit this week, and it seems... fine. Still one of the best models.
+OpenAI have launched [GPT5.1](https://cdn.openai.com/pdf/4173ec8d-1229-47db-96de-06d87147e07e/5_1_system_card.pdf) - this is an incremental release and a relatively small improvement on GPT5 (which was already great). It lets you change the 'style' of the response (e.g. professional vs quirky) in the app, which sounds, and is, awful. They have also worked on ensuring the model spends the correct amount of tokens on thinking for more complex questions - which will obviously help reduce their inference costs! They've also (finally) made it not use em dashes if you ask it not to - in some ways great, in many more ways aghhhhh as it'll now be harder to tell at a glance whether something was AI generated. I've used it a fair bit this week, and it seems... fine. Still one of the best models.
 
 ## A new best model
 
@@ -36,4 +36,5 @@ My general understanding of getting a job at the moment is that it's 'not great'
 
 
 That's it for this week - couple of things I've been listening to: 1) [The MAD podcast](https://www.youtube.com/watch?v=RqWIvvv3SnQ&t=3s) which had on OpenAI VP of Research, Jerry Tworek, discussing his career history and a bit of technical information on how the various GPT models have been developed - slightly annoying the host steers him back to the mainstream every time he goes off on a technical tangent! 2) The ever excellent [Dwarkesh podcast](https://www.youtube.com/watch?v=8-boBsWcr5A&list=PLd7-bHaQwnthaNDpZ32TtYONGVk95-fhF) with Satya Nadella - main takeaways being that he wasn't kidding when he said "we are below them, above them, around them": MS essentially owns OpenAI, and secondly agent infrastructure architecture needs to be a conversation topic in corporates.
+
 
