@@ -10,3 +10,6 @@ gem "jekyll-include-cache", group: :jekyll_plugins
 gem "tzinfo", ">= 1", "< 3"
 gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin, :jruby]
 gem "wdm", "~> 0.1", platforms: [:mingw, :x64_mingw, :mswin]
+
+# Site map
+gem "jekyll-sitemap"
