@@ -5,7 +5,7 @@ title: "Working Notes - 6/11/25"
 
 Lot's of things to cover this week - new models with terrible names and a deep dive into the water use of AI.
 
-## Does AI use incredibly amounts of water?
+## Does AI use incredible amounts of water?
 
 Andy Masley offers an in-depth look into [how much water AI uses](https://andymasley.substack.com/p/the-ai-water-issue-is-fake). Spoiler, quite a bit but then so does everything else. I find it quite useful when thinking about big numbers in the news to channel my inner [David Spiegelhalter](https://x.com/d_spiegel) and ask 'is that a big number'. For example, the [water footprint](https://watercalculator.org/) of a pair of jeans is nearly 11,000L which is the equivilant of approximately 5.4m prompts (you can argue that number up or down an order of magnitude, but that doesn't alter the point). As ever context is everything (pun intended).
 
