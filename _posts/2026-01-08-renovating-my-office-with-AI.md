@@ -17,11 +17,11 @@ This came back with a good start (I also tried it without the image to see how m
 
 ![The first attempt](/assets/images/0801_image1.png)
 
-There was then a bit of back and forth to correct what it got wrong. Specifically, it hadn’t picked up (from either the text on the plan, or the prompt itself) that the Kallax were 3x4 units* and secondly that the desk would be lower than the tops of the cupboards. This points to the model very much still operating from ‘vibes’ rather than specific details, but a couple of nudges got it back on track and resulted in the picture below:
+There was then a bit of back and forth to correct what it got wrong. Specifically, it hadn’t picked up (from either the text on the plan, or the prompt itself) that the Kallax were 3x4 units[^1] and secondly that the desk would be lower than the tops of the cupboards. This points to the model very much still operating from ‘vibes’ rather than specific details, but a couple of nudges got it back on track and resulted in the picture below:
 
 ![The second attempt](/assets/images/0801_image2.png)
 
-Which was close enough to submit for (and achieve) wife approval. Whilst the final result isn’t identical (I made some changes!) and I’ve not added door handles yet (brass? chrome? leave as bits of masking tape for 3 months whilst I ponder it?), I think it’s pretty close!
+Which was close enough to submit for and achieve wife approval. Whilst the final result isn’t identical (I made some changes!) and I’ve not added door handles yet (brass? chrome? leave as bits of masking tape for 3 months whilst I ponder it?), I think it’s pretty close!
 
 ![The real thing](/assets/images/0801_real.png)
 
@@ -29,7 +29,4 @@ Hopefully, this post is underlining how far multimodal models have progressed in
 
 As demonstrated in my [previous post](https://ewanpanter.github.io/2025-11-25/experiments-with-nano-banana-pro) about using Nano Banana Pro to visualise mermaid diagrams we are seeing image generation models move from fun toys to useful tools. Looking forward to whatever we have access to for my Xmas 2026 project and in the meantime please share any visualisations of your own projects! 
 
-
-
-\* 3x4 Units that were 10cm too tall for the space – I can confirm that with the application of a table saw and wooden inserts you can make Kallax fit any space!
-
+[^1]: 3x4 Units that were 10cm too tall for the space – I can confirm that with the application of a table saw and wooden inserts you can make Kallax fit any space!
