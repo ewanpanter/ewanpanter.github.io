@@ -21,7 +21,7 @@ There was then a bit of back and forth to correct what it got wrong. Specificall
 
 ![The second attempt](/assets/images/0801_image2.png)
 
-Which was close enough to submit for and achieve wife approval. Whilst the final result isn’t identical (I made some changes!) and I’ve not added door handles yet (brass? chrome? leave as bits of masking tape for 3 months whilst I ponder it?), I think it’s pretty close!
+Which was close enough to submit for (and achieve) wife approval. Whilst the final result isn’t identical (I made some changes!) and I’ve not added door handles yet (brass? chrome? leave as bits of masking tape for 3 months whilst I ponder it?), I think it’s pretty close!
 
 ![The real thing](/assets/images/0801_real.png)
 
@@ -32,3 +32,4 @@ As demonstrated in my [previous post](https://ewanpanter.github.io/2025-11-25/ex
 
 
 \* 3x4 Units that were 10cm too tall for the space – I can confirm that with the application of a table saw and wooden inserts you can make Kallax fit any space!
+
