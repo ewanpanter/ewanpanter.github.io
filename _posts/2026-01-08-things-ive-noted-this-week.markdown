@@ -34,10 +34,10 @@ OpenAI solve this issue via their [Responses API](https://platform.openai.com/do
 
 In order for this to work Google is storing the state of the model (since you're not anymore) in cloud using their implicit caching approach for 55 days. This is potentially a decent financial saving as the cached tokens are only charged at 10% of their normal cost. Whether that stays that way over the long term... well I guess we'll see - there is an obvious commercial opportunity there! 
 
-This last benefit also has a privacy angle that needs consideration for corporates. We are all used to interactions with the LLM being transient but now Google is storing your data 'somewhere' for 55 days. Yes it's encrypted etc etc, but the privacy team definitely will want a word before going live with this (not least because in the beta you can't specify data residency yet).
+This last benefit also has a privacy angle that needs consideration for corporates. We are all used to interactions with the LLM being transient but now Google is storing your data 'somewhere' for 55 days. Yes it's encrypted etc etc, but the privacy team will definitely want a word before going live with this (not least because in the beta you can't specify data residency yet).
 
 ## Skills continue to be a thing and are now an open standard
-I mentioned in my last entry that it seems increasingly likely that [Anthropic's Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) will be a thing with ChatGPT starting to use it [somewhat unannounced](https://x.com/simonw/status/1999503124592230780?s=20). Well, OpenAI have now [gone official](https://developers.openai.com/codex/skills/) and as with MCP, Anthropic have now made it an [open standard](https://agentskills.io/home). If you've not used skills yet, I'd recommend having a play - they have a lower barrier to entry than MCP and are useful even for casual use. I made a lesson prep skill for my (primary school teacher) wife that has now saved her a good few hours. I would assume it's just a matter of time before X.ai, Google, and other model providers adopt the new standard.
+I mentioned in my last entry that it seems increasingly likely that [Anthropic's Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) will be a thing with ChatGPT starting to use it [somewhat unannounced](https://x.com/simonw/status/1999503124592230780?s=20). Well, OpenAI have now [gone official](https://developers.openai.com/codex/skills/) and as with MCP, Anthropic have now made it an [open standard](https://agentskills.io/home). If you've not used skills yet, I'd recommend having a play - they have a lower barrier to entry than MCP and are useful even for casual use. For example, I've made a lesson prep skill for my (primary school teacher) wife that has now saved her a good few hours. I would assume it's just a matter of time before X.ai, Google, and other model providers adopt the new standard.
 
 ## Continual learning
 If I had to list the things that are preventing truly transformative AI (i.e. models that can replace entire jobs, rather than automate short tasks), top of my list would be continual learning. At the moment we have 'intelligence' but that intelligence can't learn anything after its initial training - yes you can shove ever longer contexts into the model prompt, but this has obvious limits. 
@@ -48,7 +48,7 @@ This means that the model can then answer questions on the context without query
 
 This is clearly not the final answer though. If nothing else, the model will be best at the last document / context it was trained on and forget previous documents from earlier runs. This could be mitigated by freezing the model weights related to the previous query, but then you run into interpretability roadblocks if you want to avoid simplistic assumptions. There is a huge issue of deployability - each customised set of model weights would need to be stored and loaded into memory as and when a user requested that model. 
 
-Tl;dr - interesting but doesn't solve the continual learning problem (although the technique is pretty useful for speeding up long contexts).
+Tl;dr - interesting but doesn't solve the continual learning problem (although the technique is potentially pretty useful for speeding up long contexts).
 
 ## Other stuff
 When writing the bit about prompt caching, I came across this [excellent explainer](https://ngrok.com/blog/prompt-caching) from [Sam Rose](https://samwho.dev/) - it actually ends up being a decent explainer of how an LLM works. A highly recommended read. 
@@ -58,5 +58,6 @@ As mentioned I've been [remodelling my home office](https://ewanpanter.github.io
 And finally, in a new fresh hell, AI generated pictures of packages (not) being delivered are now [a thing](https://x.com/ByrneHobart/status/2004734471267103023?s=20). 
 
 * For completeness you need to be aware of cache expiries, as they don't last forever and you'll want to refresh them from time to time.
+
 
 
