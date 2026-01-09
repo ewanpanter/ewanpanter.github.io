@@ -18,7 +18,7 @@ Data sovereignty provides a nice segue into [Mistral's new model](https://mistra
 ## Context caching and when not to use naive vector based RAG (spoiler - most of the time)
 Ever since models like Gemini Flash became good at handling long contexts (the data provided in the prompt) at a low cost, I've held that a lot of implementations of RAG using vector databases are essentially pointless.
 
-To expand on this a bit, the vector DB + LLM paradigm became a thing due to the small context window and high cost of early models ([remember when GPT4 was limited to 8k tokens and $30/m tokens!](https://azure.microsoft.com/en-us/blog/introducing-gpt4-in-azure-openai-service/)). Neither of these constraints exist anymore, and the approach comes with a lot of inherent problems and assumptions - not least that your query is semantically similar to the answer. A lot of the time you can avoid these problems and vector db complexity, just by tossing the entire document set into the context window.
+To expand on this a bit, the vector DB + LLM paradigm became a thing due to the small context window and high cost of early models ([remember when GPT4 was limited to 8k tokens and $30/m tokens!](https://azure.microsoft.com/en-us/blog/introducing-gpt4-in-azure-openai-service/)). Neither of these constraints exist anymore, and the approach comes with a lot of inherent problems and assumptions - not least that your query needs to be semantically similar to the answer. A lot of the time you can avoid these problems and vector db complexity, just by tossing the entire document set into the context window - the downside being that the larger the provided context the longer the time to the first token.
 
 I've been discussing this with a colleague this week, specifically in the context (pun intended) of using prompt caching instead of RAG with a vector db. As background, a query to an LLM is processed in two phases: the prefill (the heavy lifting where the KV cache is generated based on the context) and the decoding (generating the response tokens). The decoding part is memory bound and the prefill part is compute bound. If you save the KV cache and just reuse it with your new query appended, you can dramatically reduce the time to first token by avoiding a ton of compute. This is prompt caching.
 
@@ -58,4 +58,5 @@ As mentioned I've been [remodelling my home office](https://ewanpanter.github.io
 And finally, in a new fresh hell, AI generated pictures of packages (not) being delivered are now [a thing](https://x.com/ByrneHobart/status/2004734471267103023?s=20). 
 
 * For completeness you need to be aware of cache expiries, as they don't last forever and you'll want to refresh them from time to time.
+
 
