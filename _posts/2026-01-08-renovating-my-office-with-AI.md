@@ -3,7 +3,7 @@ layout: post
 title: "Renovating my office with AI"
 ---
 
-My Christmas DIY project this year was to renovate my office. The biggest part of this was to do some Ikea hacking and add some built in cupboards, bookshelves, and a second desk. It struck me that Nano Banana Pro would definitely know about Ikea products and therefore might be able to help me visualise the end result (and importantly get approval from my wife!). 
+My Christmas DIY project this year was to renovate my office. The biggest part of this was to do some Ikea hacking and add some built in cupboards, bookshelves, and a second desk. It struck me that [Nano Banana Pro](https://blog.google/innovation-and-ai/products/nano-banana-pro/) would definitely know about Ikea products and therefore might be able to help me visualise the end result (and importantly get approval from my wife!). 
 
 My standard approach to DIY, is to come up with an idea, and then procrastinate about the details for days or weeks. I was true to form for this project, but eventually settled on a plan sufficient to knock up a rough scale plan in Visio:
 
@@ -30,3 +30,4 @@ Hopefully, this post is underlining how far multimodal models have progressed in
 As demonstrated in my [previous post](https://ewanpanter.github.io/2025-11-25/experiments-with-nano-banana-pro) about using Nano Banana Pro to visualise mermaid diagrams we are seeing image generation models move from fun toys to useful tools. Looking forward to whatever we have access to for my Xmas 2026 project and in the meantime please share any visualisations of your own projects! 
 
 [^1]: 3x4 Units that were 10cm too tall for the space – I can confirm that with the application of a table saw and wooden inserts you can make Kallax fit any space!
+
