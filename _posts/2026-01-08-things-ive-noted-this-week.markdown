@@ -20,7 +20,7 @@ Ever since models like Gemini Flash became good at handling long contexts (the d
 
 To expand on this a bit, the vector DB + LLM paradigm became a thing due to the small context window and high cost of early models ([remember when GPT4 was limited to 8k tokens and $30/m tokens!](https://azure.microsoft.com/en-us/blog/introducing-gpt4-in-azure-openai-service/)). Neither of these constraints exist anymore, and the approach comes with a lot of inherent problems and assumptions - not least that your query needs to be semantically similar to the answer. A lot of the time you can avoid these problems and vector db complexity, just by tossing the entire document set into the context window - the downside being that the larger the provided context the longer the time to the first token.
 
-I've been discussing this with a colleague this week, specifically in the context (pun intended) of using prompt caching instead of RAG with a vector db. As background, a query to an LLM is processed in two phases: the prefill (the heavy lifting where the KV cache is generated based on the context) and the decoding (generating the response tokens). The decoding part is memory bound and the prefill part is compute bound. If you save the KV cache and just reuse it with your new query appended, you can dramatically reduce the time to first token by avoiding a ton of compute. This is prompt caching.
+I've been discussing this with [a colleague](https://www.linkedin.com/in/pip-austin/) this week, specifically in the context (pun intended) of using prompt caching instead of RAG with a vector db. As background, a query to an LLM is processed in two phases: the prefill (the heavy lifting where the KV cache is generated based on the context) and the decoding (generating the response tokens). The decoding part is memory bound and the prefill part is compute bound. If you save the KV cache and just reuse it with your new query appended, you can dramatically reduce the time to first token by avoiding a ton of compute. This is prompt caching.
 
 The key constraint to this is that you do need the same prefix prompt - but in a lot of RAG type use cases this is fine, as your prefix are your instructions and some documentation. 
 
@@ -58,6 +58,7 @@ As mentioned I've been [remodelling my home office](https://ewanpanter.github.io
 And finally, in a new fresh hell, AI generated pictures of packages (not) being delivered are now [a thing](https://x.com/ByrneHobart/status/2004734471267103023?s=20). 
 
 * For completeness you need to be aware of cache expiries, as they don't last forever and you'll want to refresh them from time to time.
+
 
 
 
