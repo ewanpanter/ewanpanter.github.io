@@ -18,10 +18,11 @@ Those with unrestricted access (i.e. the latest models) to tools like Claude Cod
 
 Furthermore, it's natural to use an existing mental model to frame this technology. To a first approximation one CRM system is very much like another - there are nuances but they do the same thing. This is not true for current AI. There seems a substantial risk that applying a commodity mind-set will result in a company being less competitive. The article is discussing systems that will run autonomously for 45 minutes plus, create their own tests, create pull requests, and self-correct. This is a different class of product with potentially profound operating model impacts. At the very least serious consideration should be given to how this type of capability can be embedded in an organisation and what priority we should put on getting agentic systems through our security / privacy processes.
 
-Until more people (and especially leaders) within enterprises have experienced the difference between state-of-the-art agentic harnesses and simple chatbots / autocomplete the strategic conversation is going to be stuck at the wrong level. 
+Until more people across enterprises - at all levels - within enterprises have experienced the difference between state-of-the-art agentic harnesses and simple chatbots / autocomplete it's going to be difficult to make well-informed strategic decisions about AI.
  
 ## One more thing
 
 One of the things that makes agentic systems so powerful is their ability to apply [agent skills](https://agentskills.io/home) as they allow agents to behave in a reliable / structured manner. Anthropic's new [guide to building skills](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) is an excellent little resource and definitely worth a read – and trying out!
+
 
 
