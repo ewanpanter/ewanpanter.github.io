@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Working Notes - 06/03/26"
+---
+
+The US government has been making some [very odd](https://x.com/SecWar/status/2027507717469049070?s=20) [AI choices](https://www.anthropic.com/news/where-stand-department-war) this week around supporting the [fastest-growing software company ever](https://economictimes.indiatimes.com/news/international/us/anthropic-hits-14-billion-revenue-run-rate-becomes-fastest-growing-software-company-ever/articleshow/128304436.cms?from=mdr), but rather than duplicating the discussion on this, I will instead  concentrate on two papers which have stood out to me in the last couple of weeks.
+
+## Do I have to repeat myself?
+
+I have a use case where a lot of text information from various sources is put into a non-reasoning model's context window and it's asked to validate a previous model’s summarisation. Due to the specific method we were using to add some of the information to the prompt, we discovered we were actually accidentally putting some of the data in twice. As this was already a long prompt that was run many times, we corrected the prompt to only put the information in once. Surprisingly the results actually got worse - a counter-intuitive result as I was expecting [context rot](https://research.trychroma.com/context-rot). 
+
+Whilst I was pondering this, I coincidentally came across this short (3 pages!), but fascinating, [paper](https://arxiv.org/pdf/2512.14982) from Google. The abstract is so short I don't think I could summarise it any better - so I won't - "When not using reasoning, repeating the input prompt improves performance for popular models (Gemini, GPT, Claude, and Deepseek) without increasing the number of generated tokens or latency." This sounds suspiciously like what we’ve been seeing in my use case!
+
+The reason why this works is super simple. Transformer models can't attend to future tokens (as the entire architecture is built around predicting the next token based strictly on past ones) so if something is important (e.g. the question) but the model has not yet seen some important context, it won't be able to take this information into account and will process the question without seeing the context. If you just duplicate the entire prompt then every token can attend to every other token.
+
+The quoted results are dramatic - across all the models tested (Gemini 2.0 Flash, GPT-4o, Claude 3.7 Sonnet, Deepseek V3) prompt repetition won 47 times to 0! Accuracy in needle in a haystack tasks jumped from 21% to 97%. The length of the output was unchanged - which assuming if this is what's going on with my example, I can attest to - we would have noticed if the output was changing.
+
+So basically, a free (input token cost notwithstanding) improvement! It won't even significantly increase latency as the repeated prompt is processed in the very parallelised prefill stage. Before getting too excited, the trick doesn't work with reasoning models, as the RL training the models undergo tend to result in the models repeating the prompt in their chain of thought anyway. But if you have a use case that uses a non-reasoning model, you should absolutely be trying this out (I am in the process of A/B testing this right now!).
+
+## Multi-agent teams? Don't.
+
+A very interesting [paper](https://arxiv.org/pdf/2602.01011) from Stanford which is something of a tour de force on multi-agent frameworks. The short version is that they found that model training naturally means that they will tend to reach compromise positions even when a member of the team has objectively the correct answer. This has quite important implications for how agentic teams are set up, and supports my current view that you should only do production agentic 'stuff' within strict scaffolding.
+
+The experimental set up was interesting with two distinct approaches. The first approach was with a team of agents where each agent was a different model (e.g. Claude, OpenAI, etc). The team was then tested on standard maths, question/answer benchmarks to see if the models could work out which model was smartest (spoiler - nope). 
+
+The second setup was perhaps more interesting with each agent being the same model, but was provided with different information given in their context windows. They then either gave one agent the ground truth answer, or they gave each agent part of the answer and they had to collectively share their part to get the correct answer.
+
+Suffice to say both setups resulted in the agentic team getting the wrong answer or at least significantly underperformed the score that would have been obtained by the expert model alone. I'm not particularly surprised by the model mix experiment result, but the experiments where one of the agents is given the ground truth but the team still got the wrong answer is pretty shocking. They did the maximal version of this and actually told all the agents which agent had the correct answer, and yet - failure to get the right answer.
+
+The actual failure mechanism is surprising but obvious at the same time - you know when you give a chatbot some new information, no matter how inane, and it says "wow, that's a really good point I hadn't considered"? That's the failure mechanism. The models love to compromise - I guess blame RLHF. As an example of how that plays out, in one scenario they have to [rank items that would be useful on the moon](https://hr.lib.byu.edu/00000179-146f-d837-a9ff-1e7f5b530000/nasa-moon-survival) - the model with the correct answer, will still state things like "I think that oxygen is the most important item, but model 2 makes valid points, so I will compromise and move oxygen to the second position". The very act of negotiation dilutes away any expertise that the models possess.
+
+Even some of the things that the researchers controlled for are interesting - for example there is a concept in psychology called [first-speaker bias](https://biasbeware.com/2018/12/11/the-first-person-to-speak-has-the-most-influence/) - they controlled for this through random starting etc, but it is not something I would have immediately considered when structuring an agentic team.
+
+The main takeaway for me from the paper is not to use agentic teams and expect to get the correct answer in scenarios with objective truth. Instead use a lot of scaffolding - chain the agents together to best use their expertise (e.g. if GPT5.4 is best at maths, then give a maths component to the GPT5.4 agent, if Claude is best at writing, then give that role to that Claude agent, etc.). Secondly in a scenario where you don't know which agent will generate the best answer, use a model as a router to select the best answer from a number of agents. Finally, the somewhat heartening third option is to defer to a human in the loop - I guess we still have some uses!
