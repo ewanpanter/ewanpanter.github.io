@@ -3,7 +3,7 @@ layout: post
 title: "Working Notes - 06/03/26"
 ---
 
-The US government has been making some [very odd](https://x.com/SecWar/status/2027507717469049070?s=20) [AI choices](https://www.anthropic.com/news/where-stand-department-war) this week around supporting the [fastest-growing software company ever](https://economictimes.indiatimes.com/news/international/us/anthropic-hits-14-billion-revenue-run-rate-becomes-fastest-growing-software-company-ever/articleshow/128304436.cms?from=mdr), but rather than duplicating the discussion on this, I will instead  concentrate on two papers which have stood out to me in the last couple of weeks.
+The US government has been making some [very odd](https://x.com/SecWar/status/2027507717469049070?s=20) AI [choices](https://www.anthropic.com/news/where-stand-department-war) this week around supporting the [fastest-growing software company ever](https://economictimes.indiatimes.com/news/international/us/anthropic-hits-14-billion-revenue-run-rate-becomes-fastest-growing-software-company-ever/articleshow/128304436.cms?from=mdr), but rather than duplicating the discussion on this, I will instead  concentrate on two papers which have stood out to me in the last couple of weeks.
 
 ## Do I have to repeat myself?
 
@@ -32,3 +32,4 @@ The actual failure mechanism is surprising but obvious at the same time - you kn
 Even some of the things that the researchers controlled for are interesting - for example there is a concept in psychology called [first-speaker bias](https://biasbeware.com/2018/12/11/the-first-person-to-speak-has-the-most-influence/) - they controlled for this through random starting etc, but it is not something I would have immediately considered when structuring an agentic team.
 
 The main takeaway for me from the paper is not to use agentic teams and expect to get the correct answer in scenarios with objective truth. Instead use a lot of scaffolding - chain the agents together to best use their expertise (e.g. if GPT5.4 is best at maths, then give a maths component to the GPT5.4 agent, if Claude is best at writing, then give that role to that Claude agent, etc.). Secondly in a scenario where you don't know which agent will generate the best answer, use a model as a router to select the best answer from a number of agents. Finally, the somewhat heartening third option is to defer to a human in the loop - I guess we still have some uses!
+
