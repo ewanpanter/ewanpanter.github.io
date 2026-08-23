@@ -25,4 +25,42 @@
       document.head.appendChild(fullres);
     })();
   </script>
+  <style>
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  #lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var box = document.createElement('div');
+    box.id = 'lightbox';
+    var big = document.createElement('img');
+    box.appendChild(big);
+    document.body.appendChild(box);
+    box.addEventListener('click', function() { box.style.display = 'none'; });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') box.style.display = 'none';
+    });
+    document.querySelectorAll('img').forEach(function(img) {
+      if (img === big) return;
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function() {
+        big.src = this.src;
+        box.style.display = 'flex';
+      });
+    });
+  });
+</script>
 </head>
