@@ -41,7 +41,7 @@ The diagram above is my noddy attempt at trying to show the major components of 
 - The final bastion is the output classifier. This is largely for the extra cunning attacks where the input is benign but the output it generates is not. For example a [multi-turn jailbreak](https://www.promptfoo.dev/docs/red-team/strategies/multi-turn/).
 
 The only other defences to mention are the offline safeguarding activities - all the frontier companies do [red teaming internally](https://openai.com/index/unlocking-self-improvement-gpt-red/), and with external partners like the [UK AISI](https://www.aisi.gov.uk/). Additionally, since 2024 the US government has been releasing quite significant security ‘guidelines’ to datacentres housing [frontier models](https://media.defense.gov/2024/apr/15/2003439257/-1/-1/0/csi-deploying-ai-systems-securely.pdf).
-
+<!--more-->
 ## How do traditional input / output classifiers work?
 
 The rest of this post is going to concentrate on the input and output classifiers - the bits that actively decide if the input or the output is naughty.
