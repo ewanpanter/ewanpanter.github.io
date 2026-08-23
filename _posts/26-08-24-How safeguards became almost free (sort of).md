@@ -1,3 +1,8 @@
+---
+layout: post
+title: "How safeguards became almost free (sort of)"
+---
+
 The economics and approaches used for AI safeguards have recently changed quite dramatically, and this has largely passed by unnoticed.
 
 I find this kind of thing interesting and recently gave a couple of talks at work about how safeguards work in frontier AI systems, and demonstrated how I implemented one of the key new techniques on a 4bn open weights model. This approach has dramatically reduced the cost of running safeguard systems, but also opened up a number of new threats. I thought it’d make an interesting set of posts for my blog - so here we are.
