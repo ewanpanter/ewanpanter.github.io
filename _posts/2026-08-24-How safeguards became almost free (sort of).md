@@ -7,7 +7,7 @@ The economics and approaches used for AI safeguards have recently changed quite 
 
 I find this kind of thing interesting and recently gave a couple of talks at work about how safeguards work in frontier AI systems, and demonstrated how I implemented one of the key new techniques on a 4bn open weights model. This approach has dramatically reduced the cost of running safeguard systems, but also opened up a number of new threats. I thought it’d make an interesting set of posts for my blog - so here we are.
 
-This first post will provide an overview of how modern safeguards work. The next post will concentrate on some of the risks that enterprises now need to consider. I’ll then cover some of the wider societal issues in a third post, and finally the fourth post will be a reasonably geeky write up of how I actually implemented linear classifiers on an open weights model.
+This first post will provide an overview of how modern safeguards work. The [next post](https://ewanpanter.github.io/2026-09-21/The-governance-bill-for-cheap-AI-safeguards) will concentrate on some of the risks that enterprises now need to consider. I’ll then cover some of the wider societal issues in a third post, and finally the fourth post will be a reasonably geeky write up of how I actually implemented linear classifiers on an open weights model.
 
 (I’d put the chances of the first two seeing the light of day as at least 90%, on the grounds that a) you’re reading one of them and b) I’ve written the other one. The last two are somewhat more embryonic - but hey the nights are drawing in!)
 
