@@ -1,3 +1,7 @@
+---
+layout: post
+title: "The governance bill for cheap AI safeguards"
+---
 In my [last post](https://ewanpanter.github.io/2026-08-24/How-safeguards-became-almost-free-(sort-of)) I showed how using simple linear probe classifiers combined with a small LLM as a judge has transformed the cost profile of AI model safeguards. In this follow-up post I will demonstrate the potential for misuse. This almost entirely derives from the extremely low cost of running thousands of probes on every single conversation.  
 
 With a practically unlimited ability to sample the meaning / topic of a conversation without [incurring additional compute cost](https://arxiv.org/abs/2601.04603), it becomes technically possible for a model provider to perform speculative searches. Whilst the value of any one probe trigger in a large population may be low (as even a low false positive rate in a sample of billions is still a [large number](https://en.wikipedia.org/wiki/Law_of_truly_large_numbers)) there are plenty of cases where patterns of triggers can be useful in ways many people and enterprises would not love.
