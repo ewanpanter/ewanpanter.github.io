@@ -3,6 +3,7 @@ layout: post
 title: "Building and fine-tuning my own version of Jev on GCP"
 ---
 
+
 # Building and fine-tuning my own version of Jev on GCP
 
 This is a follow-up to my first post on Jev and decision intelligence AI models. When I first read about [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev), I figured I could guess how it worked, and probably build my own version that wouldn’t perform terribly. Well this post is me putting my money (about £40 as it turned out\!) where my mouth is and doing just that. I got slightly carried away, so thanks to my wife, Alice, for letting me do this in a week of evenings\!
