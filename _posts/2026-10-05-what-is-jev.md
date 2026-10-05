@@ -4,9 +4,6 @@ title: "Jev & Decision Intelligence - What it is, how it works, and what it isn�
 date: 2026-10-05 20:00:00 +0100
 ---
 
-
-# Jev & Decision Intelligence \- What it is, how it works, and what it isn’t
-
 A new AI model named [Jev](https://docs.typesafe.ai/introduction) from a startup named [TypeSafe AI](https://typesafe.ai/) has been getting a bunch of hype recently \- and coined a new term \- decision intelligence. In mid-September when it came out, I glanced at the documentation, stroked my chin a bit, and was a bit surprised that I could guess how it worked. Their lack of an obvious technical moat notwithstanding, it is a super interesting model that fills a real need in the enterprise AI landscape. 
 
 What this post does is firstly explain what decision intelligence is, why it’s useful and then explains how it (probably) works. The second post then documents whether I can make my own on [GCP](https://cloud.google.com/?hl=en) by fine tuning open-weight models (spoiler, I absolutely can) and discusses the performance you can expect if you do. This post starts off high-level and gets geekier as it goes on, so drop out when you reach your nerd threshold\!
@@ -27,7 +24,7 @@ What Jev (and [its](https://dealroom.co/news/158476-cloudflare-launches-clef-as-
 
 ![Decision AI input and ouput.](/assets/images/261005_jev_image11.png)
 
-Jev is also extremely cheap and quick \- as part of the benchmarking of my homemade version, I found Jev would classify a [publicly available dataset of 1000 customer complaints](https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/), with three decisions for each complaint, for all of 4p in an median time of 126ms/complaint. As a comparison, if you’re really fast at blinking, you’ll top out at 150ms per blink. The same test with [Gemini 3.5 Flash-lite](https://deepmind.google/models/gemini/flash-lite/) cost £1.72 and took about 2.1 seconds/complaint (14 blinks). Accuracy wise there is not much in it \- in my testing, Jev was 3.6 percentage points behind Gemini at 1/40th of the cost in 1/16th of the time.
+Jev is also extremely cheap and quick \- as part of the benchmarking of my homemade version, I found Jev would classify a [publicly available dataset of 1000 customer complaints](https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/), with three decisions for each complaint, for all of 4p in a median time of 126ms/complaint. As a comparison, if you’re really fast at blinking, you’ll top out at 150ms per blink. The same test with [Gemini 3.5 Flash-lite](https://deepmind.google/models/gemini/flash-lite/) cost £1.72 and took about 2.1 seconds/complaint (14 blinks). Accuracy wise there is not much in it \- in my testing, Jev was 3.6 percentage points behind Gemini at 1/40th of the cost in 1/16th of the time.
 
 ![Jev is really cheap compared to a normal LLM!](/assets/images/261005_jev_image14.png)
 
