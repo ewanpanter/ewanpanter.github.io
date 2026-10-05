@@ -6,7 +6,7 @@ date: 2026-10-05 20:00:00 +0100
 
 A new AI model named [Jev](https://docs.typesafe.ai/introduction) from a startup named [TypeSafe AI](https://typesafe.ai/) has been getting a bunch of hype recently \- and coined a new term \- decision intelligence. In mid-September when it came out, I glanced at the documentation, stroked my chin a bit, and was a bit surprised that I could guess how it worked. Their lack of an obvious technical moat notwithstanding, it is a super interesting model that fills a real need in the enterprise AI landscape. 
 
-What this post does is firstly explain what decision intelligence is, why it’s useful and then explains how it (probably) works. The second post then documents whether I can make my own on [GCP](https://cloud.google.com/?hl=en) by fine tuning open-weight models (spoiler, I absolutely can) and discusses the performance you can expect if you do. This post starts off high-level and gets geekier as it goes on, so drop out when you reach your nerd threshold\!
+What this post does is firstly explain what decision intelligence is, why it’s useful and then explains how it (probably) works. [The second post](https://ewanpanter.github.io/2026-10-05/building-jev) then documents whether I can make my own on [GCP](https://cloud.google.com/?hl=en) by fine tuning open-weight models (spoiler, I absolutely can) and discusses the performance you can expect if you do. This post starts off high-level and gets geekier as it goes on, so drop out when you reach your nerd threshold\!
 
 ## What is decision intelligence?
 
@@ -106,5 +106,7 @@ So, key takeaways:
 - By restricting the softmax function to only the valid options for a given question, Jev can ensure that only valid options are outputted and that the probability distribution adds up to 100%.  
 - Jev calculates all the answers to all of the questions about a given piece of input text by looking at the logit scores at the end of each question and ensuring that the question can only see itself, the system prompt, and the initial input text (the state).  
 - Because Jev only ever reads the state and the questions once (even when answering a hundred separate questions) it generates all of its answers in the time and cost that a normal LLM would take to generate the first token.
+
+If you got this far (thank you!), you should probably go and read the [second post](https://ewanpanter.github.io/2026-10-05/building-jev).
 
 **As ever, all opinions are my own and not those of my employer.**
