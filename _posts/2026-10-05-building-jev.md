@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building and fine-tuning my own version of Jev on GCP"
+date: 2026-10-05 20:05:00 +0100
 ---
 
 
