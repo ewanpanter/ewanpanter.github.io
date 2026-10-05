@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jev & Decision Intelligence - What it is, how it works, and what it isn’t"
+date: 2026-10-05 20:00:00 +0100
 ---
 
 
