@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Decision Intelligence - What it is, how it works, and what it isn’t"
+title: "Jev & Decision Intelligence - What it is, how it works, and what it isn’t"
 ---
 
-# Decision Intelligence \- What it is, how it works, and what it isn’t
+# Jev & Decision Intelligence \- What it is, how it works, and what it isn’t
 
 A new AI model named [Jev](https://docs.typesafe.ai/introduction) from a startup named [TypeSafe AI](https://typesafe.ai/) has been getting a bunch of hype recently \- and coined a new term \- decision intelligence. In mid-September when it came out, I glanced at the documentation, stroked my chin a bit, and was a bit surprised that I could guess how it worked. Their lack of an obvious technical moat notwithstanding, it is a super interesting model that fills a real need in the enterprise AI landscape. 
 
