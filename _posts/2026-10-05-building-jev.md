@@ -41,6 +41,7 @@ With the GPU chosen, the memory of the GPU in turn decided the size of model I c
 | Qwen3-0.6B | 0.6B dense | 0.397 |
 
 
+ 
 The sweep showed there was little benefit in increasing the size of the model beyond 4B parameters, so in the end I decided to use the [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) as my base model. It is a dense model, so the ‘all the questions at once with a mask’ works, which I like and think is [technically](https://www.goodreads.com/quotes/11642962-when-you-see-something-that-is-technically-sweet-you-go) [sweet](http://sweet.It). It will also fit in the memory of the L4 with room to fine-tune and is a relatively new model so has benefited from some degree of [mid-training](https://cameronrwolfe.substack.com/p/midtraining-notes) (I have a theory that the more mid-training a model has, the better its gut instincts).
 
 A few comments on the different architectures:
